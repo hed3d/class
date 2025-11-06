@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Сайт 10Л класу</title>
+<style>
+  :root{
+    --bg:#1e1e1e;
+    --card:#2a2a2a;
+    --accent:#c0c0c0;
+    --muted:#a0a0a0;
+    --text:#ffffff;
+    --header:#252525;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    overflow-x:hidden;
+  }
+
+  /* Зимний фон: градиент и лёгкое свечение */
+  body::before{
+    content:"";
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background:radial-gradient(ellipse at top,#294a6d 0%,#1e1e1e 70%);
+    z-index:-3;
+  }
+
+  .container{width:94%;max-width:1100px;margin:0 auto;padding:20px 0;position:relative;z-index:2;}
+
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px;
+    background:linear-gradient(135deg,#2e3b4e,var(--header));
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 0 20px rgba(0,200,255,0.2);
+  }
+
+  .brand{display:flex;align-items:center;gap:14px}
+  .logo{
+    width:50px;
+    height:50px;
+    border-radius:10px;
+    background:linear-gradient(135deg,#b0e6ff,#ffffff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    color:#00334d;
+    box-shadow:0 4px 12px rgba(0,200,255,0.5);
+  }
+
+  h1{font-size:24px;margin:0;text-shadow:0 0 8px rgba(255,255,255,0.3);}
+  p.lead{margin:4px 0 0;color:var(--muted);font-size:14px}
+
+  .hero{padding:20px;background:var(--card);border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.5);}
+  h2,h3{margin-top:0;color:#b0e6ff;text-shadow:0 0 10px rgba(176,230,255,0.4);}
+  table{width:100%;border-collapse:collapse;margin-top:10px}
+  th,td{border:1px solid #444; padding:6px;text-align:left;font-size:14px;vertical-align:middle;}
+  th{background:#333}
+  .btn{
+    display:inline-block;
+    padding:2px 6px;
+    font-size:11px;
+    line-height:1.2;
+    border-radius:5px;
+    text-decoration:none;
+    background:linear-gradient(135deg,#b0e6ff,#ffffff);
+    color:#000;
+    margin:2px 2px 0 0;
+    transition:0.2s;
+    box-shadow:0 0 6px rgba(255,255,255,0.3);
+  }
+  .btn:hover{opacity:0.85;transform:translateY(-1px);}
+  .btn.disabled{background:#555;color:#999;pointer-events:none;}
+  .card{
+    background:rgba(42,42,42,0.9);
+    padding:16px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.4),0 0 10px rgba(176,230,255,0.1);
+  }
+
+  footer{
+    margin-top:auto;
+    padding:16px 0;
+    color:var(--muted);
+    text-align:center;
+    font-size:13px;
+    position:relative;
+    z-index:2;
+  }
+
+  .table-wrapper{overflow-x:auto}
+
+  /* ❄️ Анимация снежинок ❄️ */
+  .snowflake {
+    position: fixed;
+    top: -10px;
+    color: #fff;
+    font-size: 1em;
+    opacity: 0.8;
+    animation-name: fall;
+    animation-timing-function: linear;
+    z-index:1;
+  }
+
+  @keyframes fall {
+    0% {transform:translateY(0) rotate(0deg);}
+    100% {transform:translateY(100vh) rotate(360deg);}
+  }
+
+  /* 🎄 Украшения */
+  .tree {
+    position:fixed;
+    bottom:0;
+    left:10px;
+    font-size:60px;
+    filter:drop-shadow(0 0 5px #0f0);
+    opacity:0.9;
+    z-index:1;
+  }
+  .snowman {
+    position:fixed;
+    bottom:0;
+    right:20px;
+    font-size:60px;
+    filter:drop-shadow(0 0 6px #fff);
+    opacity:0.9;
+    z-index:1;
+  }
+</style>
+</head>
+<body>
+  <!-- 🎄 Новогодний декор -->
+  <div class="tree"></div>
+  <div class="snowman"></div>
+
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">10Λ</div>
+        <div>
+          <h1>🎄 10Л Розклад 🎄</h1>
+          <p class="lead"><a class="btn" href="https://t.me/+uL_0gLApBLg0YjRi">питання до розробника↙︎</a></p>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h2>⛇ Розклад ⛇</h2>
+        <h3>Розклад дзвінків (update)</h3>
+        <div class="table-wrapper">
+          <table>
+            <tr><td>1 урок</td><td>08:00 – 08:45</td></tr>
+            <tr><td>2 урок</td><td>08:50 – 09:35</td></tr>
+            <tr><td>3 урок</td><td>09:45 – 10:30</td></tr>
+            <tr><td>4 урок</td><td>10:40 – 11:25</td></tr>
+            <tr><td>5 урок</td><td>11:35 – 12:20</td></tr>
+            <tr><td>6 урок</td><td>12:25 – 13:10</td></tr>
+            <tr><td>7 урок</td><td>13:15 – 14:00</td></tr>
+            <tr><td>8 урок</td><td>14:10 – 14:55</td></tr>
+          </table>
+        </div>
+
+        <!-- остальная часть как в оригинале -->
+        <h3>Понеділок</h3>
+        <table>
+          <tr><td>Українська література</td><td><a class="btn" href="https://meet.google.com/ked-wbuz-bkz">Онлайн урок</a></td></tr>
+          <tr><td>Історія України</td><td><a class="btn" href="https://meet.google.com/ewk-rjdu-rxq">Онлайн урок</a></td></tr>
+          <tr><td>Інформатика</td><td><a class="btn" href="https://meet.google.com/xha-ymjx-sga">група 1</a> <a class="btn" href="https://meet.google.com/aya-qogn-ytw">група 2</a></td></tr>
+          <tr><td>Англійська мова</td><td><a class="btn disabled" href="#">помилка</a></td></tr>
+          <tr><td>Математика</td><td><a class="btn" href="https://meet.google.com/pbv-todf-wmq">Онлайн урок</a></td></tr>
+          <tr><td>Математика</td><td><a class="btn" href="https://meet.google.com/pbv-todf-wmq">Онлайн урок</a></td></tr>
+        </table>
+
+        <h3>Вівторок</h3>
+        <table>
+          <tr><td>Захист України</td><td><a class="btn" href="https://meet.google.com/pct-iynx-qtr">група 1</a> <a class="btn" href="https://meet.google.com/crv-uwvg-vkk">група 2</a></td></tr>
+          <tr><td>Громадянська освіта</td><td><a class="btn" href="https://meet.google.com/ugr-bxbm-ywi">Онлайн урок</a></td></tr>
+          <tr><td>Біологія</td><td><a class="btn" href="https://meet.google.com/bkb-xhph-vfx">Онлайн урок</a></td></tr>
+          <tr><td>Українська мова</td><td><a class="btn" href="https://meet.google.com/syg-wkdi-bpz">група 1</a> <a class="btn" href="https://meet.google.com/hpz-yadh-itq">група 2</a></td></tr>
+          <tr><td>Українська мова</td><td><a class="btn" href="https://meet.google.com/syg-wkdi-bpz">група 1</a> <a class="btn" href="https://meet.google.com/hpz-yadh-itq">група 2</a></td></tr>
+          <tr><td>Година спілкування</td><td><a class="btn disabled" href="#">помилка</a></td></tr>
+        </table>
+
+        <h3>Середа</h3>
+        <table>
+          <tr><td>Історія України</td><td><a class="btn" href="https://meet.google.com/ewk-rjdu-rxq">Онлайн урок</a></td></tr>
+          <tr><td>Англійська мова</td><td><a class="btn disabled" href="#">помилка</a></td></tr>
+          <tr><td>Фізична культура</td><td><a class="btn" href="https://meet.google.com/qdn-noim-xrw">Онлайн урок</a></td></tr>
+          <tr><td>Мистецтво / Всесвітня історія</td><td><a class="btn" href="https://meet.google.com/ewk-rjdu-rxq">Онлайн урок</a></td></tr>
+          <tr><td>Географія</td><td><a class="btn" href="https://meet.google.com/pqf-rtni-ymy">Онлайн урок</a></td></tr>
+          <tr><td>Хімія</td><td><a class="btn" href="https://meet.google.com/bkb-xhph-vfx">Онлайн урок</a></td></tr>
+        </table>
+
+        <h3>Четвер</h3>
+        <table>
+          <tr><td>Зарубіжна література</td><td><a class="btn" href="https://meet.google.com/ecg-cxwe-oud">Онлайн урок</a></td></tr>
+          <tr><td>Біологія</td><td><a class="btn" href="https://meet.google.com/bkb-xhph-vfx">Онлайн урок</a></td></tr>
+          <tr><td>Математика</td><td><a class="btn" href="https://meet.google.com/pbv-todf-wmq">Онлайн урок</a></td></tr>
+          <tr><td>Математика</td><td><a class="btn" href="https://meet.google.com/pbv-todf-wmq">Онлайн урок</a></td></tr>
+          <tr><td>Українська мова</td><td><a class="btn" href="https://meet.google.com/syg-wkdi-bpz">група 1</a> <a class="btn" href="https://meet.google.com/hpz-yadh-itq">група 2</a></td></tr>
+          <tr><td>Українська мова</td><td><a class="btn" href="https://meet.google.com/syg-wkdi-bpz">група 1</a> <a class="btn" href="https://meet.google.com/hpz-yadh-itq">група 2</a></td></tr>
+        </table>
+
+        <h3>П’ятниця</h3>
+        <table>
+          <tr><td>Англійська мова</td><td><a class="btn disabled" href="#">помилка</a></td></tr>
+          <tr><td>Фізична культура</td><td><a class="btn" href="https://meet.google.com/qdn-noim-xrw">Онлайн урок</a></td></tr>
+          <tr><td>Захист України</td><td><a class="btn" href="https://meet.google.com/pct-iynx-qtr">група 1</a> <a class="btn" href="https://meet.google.com/crv-uwvg-vkk">група 2</a></td></tr>
+          <tr><td>Фізика</td><td><a class="btn" href="https://meet.google.com/dsq-owmq-cnk">Онлайн урок</a></td></tr>
+          <tr><td>Фізика</td><td><a class="btn" href="https://meet.google.com/dsq-owmq-cnk">Онлайн урок</a></td></tr>
+        </table>
+
+        <!-- ... остальное расписание без изменений ... -->
+
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Контакти</h3>
+      <p class="author">Автори сайту: asorder & hed3d </p>
+    </section>
+
+  </div>
+
+  <footer>
+    © <span id="year"></span> Сайт 10Л класу — Автори: asorder & hed3d
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ❄️ Генератор снежинок
+    const snowflakes = 40;
+    for (let i = 0; i < snowflakes; i++) {
+      const flake = document.createElement('div');
+      flake.classList.add('snowflake');
+      flake.textContent = '❄';
+      flake.style.left = Math.random() * 100 + 'vw';
+      flake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+      flake.style.animationDuration = (Math.random() * 30 + 30) + 's';
+      flake.style.animationDelay = Math.random() * 5 + 's';
+      document.body.appendChild(flake);
+    }
+  </script>
+</body>
+</html>
